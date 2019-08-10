@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		while(T!=0)
+		{
+		    int P1=sc.nextInt();
+		    int P2=sc.nextInt();
+		    int K=sc.nextInt();
+		    int q;
+                    if((P1+P2)%K==0)
+                    {
+                      q=(P1+P2)/K;
+                      if(q%2==0)
+                         System.out.println("CHEF");
+                      else
+                         System.out.println("COOK");
+                     }
+                    else
+                    {
+                      q=(P1+P2)/K;
+                      if(q%2==0)
+                       System.out.println("CHEF");
+                      else
+                       System.out.println("COOK");
+                    }
+                   T--;
+		 }
+	      }
+}

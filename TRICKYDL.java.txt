@@ -1,0 +1,34 @@
+import java.util.*;
+import java.io.*;
+class Profit
+{
+    public static void main(String[] args)
+    {
+       Scanner sc=new Scanner(System.in);
+       int T=sc.nextInt();
+       while(T!=0)
+       {
+          long A=sc.nextInt();
+          long sum=A-1;
+          int i=1;long max=-1;
+          long res;
+          int D1,D2=0;
+          while(sum>0)
+          {
+              res=A-(long)Math.pow(2,i);
+              sum+=res;
+              if(sum>max)
+              {
+                  max=sum;
+                  D2=i;
+              }
+              i++;
+          }
+          D1=i-1;
+          D2=D2+1;
+          System.out.println(D1+" "+D2);
+          T--;
+       }
+    }
+ }           
+              

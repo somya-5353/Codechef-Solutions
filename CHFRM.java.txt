@@ -1,0 +1,45 @@
+/* package codechef; // don't place package name! */
+
+import java.io.*;
+import java.util.*;
+class Solution
+{
+   public static void main(String[] args)
+   {
+       Scanner sc=new Scanner(System.in);
+       int T=sc.nextInt();
+       int N;
+       while(T!=0)
+       {
+            N=sc.nextInt();
+            int i,flag=0;
+            long sum=0,ele,mean=0;
+            ArrayList<Long> al=new ArrayList<Long>(N);
+            for(i=0;i<N;i++)
+            {
+                ele=sc.nextInt();
+                al.add(ele);
+                sum+=ele;
+            }
+            if(sum%N!=0)
+            {
+                flag=1; 
+            }
+            else
+            {
+                 mean=sum/N;
+                 if(!al.contains(mean))
+                 {
+                    flag=1;    
+                 }
+            }
+            if(flag==0)
+            {
+               System.out.println(al.indexOf(mean)+1);
+            }
+            else
+               System.out.println("Impossible");
+            T--;
+         }
+     }
+ }       

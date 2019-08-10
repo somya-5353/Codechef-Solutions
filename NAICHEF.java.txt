@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+class Naive
+{
+   public static void main(String[] args)
+   {
+      Scanner sc=new Scanner(System.in);
+      int T=sc.nextInt();
+      while(T!=0)
+      {
+        int N=sc.nextInt();
+        int A=sc.nextInt();
+        int B=sc.nextInt();
+        int a=0,b=0;
+        double p;
+        int di[]=new int[N];
+        for(int i=0;i<N;i++)
+            di[i]=sc.nextInt();
+        for(int i=0;i<N;i++)
+        {
+            if(di[i]==A)
+               a++;
+            if(di[i]==B)
+               b++;
+         }
+         p=((double)a/(double)N)*((double)b/(double)N);
+         System.out.println(p);
+         T--;
+       }
+     }
+   }                   

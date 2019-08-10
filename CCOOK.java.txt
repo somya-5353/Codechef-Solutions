@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+class Cookoff
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int N=sc.nextInt();
+		int a[][]=new int[N][5]; 
+		for(int i=0;i<N;i++)
+		{
+		    int j=0;
+		    for(int k=0;k<5;k++)
+		    {
+		      a[i][k]=sc.nextInt();
+		      if(a[i][k]==1)
+		        j++;
+		    }
+		    if(j==0)
+		     System.out.println("Beginner");
+		    else if(j==1)
+		      System.out.println("Junior Developer");
+		    else if(j==2)
+		     System.out.println("Middle Developer");
+		    else if(j==3)
+		     System.out.println("Senior Developer");
+		    else if(j==4)
+		     System.out.println("Hacker");
+		    else 
+		      System.out.println("Jeff Dean");
+		}
+	}
+}

@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+class Friend
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int N=sc.nextInt();
+        int count=0;
+        String s1;
+        for(int i=1;i<=N;i++)
+        {
+            String s=sc.next();
+            for(int j=0;j<(s.length()-1);j++)
+            {
+                s1=s.substring(j,(j+2));
+                if(s1.equals("ch") || s1.equals("he") || s1.equals("ef"))
+                {
+                   count++;
+                   break;
+            }   }
+        }
+        System.out.println(count);
+    }
+}
